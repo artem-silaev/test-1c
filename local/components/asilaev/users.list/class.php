@@ -34,7 +34,7 @@ class CUsersList extends \CBitrixComponent implements Controllerable
     {
         if (!$arParams['PAGE_ELEMENT_COUNT'])
             $arParams['PAGE_ELEMENT_COUNT'] = 10;
-        
+
         $this->nav = new \Bitrix\Main\UI\PageNavigation("nav");
         $this->nav->allowAllRecords(true)
             ->setPageSize($arParams['PAGE_ELEMENT_COUNT'])
@@ -50,9 +50,9 @@ class CUsersList extends \CBitrixComponent implements Controllerable
     }
 
     /**
-     * @return array
      * Новая возможность в битрикс использовать определенные методы в компонентах для AJAX запросов
      * Конкртено тут определяются фильтры, возможность например использовать только PUT запросы
+     * @return array
      */
     public function configureActions()
     {
@@ -64,10 +64,10 @@ class CUsersList extends \CBitrixComponent implements Controllerable
     }
 
     /**
-     * @param $post
-     * @return array
      * Функция экспорта данных пользователей
      * Ajax-методы должны быть с постфиксом Action
+     * @param $post
+     * @return array
      */
     public function startDataExportAction($post)
     {
